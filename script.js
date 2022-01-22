@@ -136,30 +136,37 @@ function openWin () {
 
 document.getElementById("preview").addEventListener("click", openWin)
 
-// live preview settings
 
-// var liveBtn = document.getElementById("live-preview")
+document.getElementById("TriBar").addEventListener("click", function () {
+    var option = document.getElementsByClassName("option2")[0]
+    var main = document.getElementById("main")
+    if (option.style.display != "none"){
+        option.style.display = "none";
+        main.style = "margin-top: 60px !important"
+    }else{
+        option.style.display = "flex";
+        main.style = "margin-top:147px !important"
+    }
+})
 
-// showResult = () =>{
-//     document.getElementById("main").style.display ="none";
-//     document.getElementById("main2").style.display = "block"
-// }
+var preview2 = document.getElementById("Preview2")
+var save2 = document.getElementById("Save2")
 
-// liveBtn.addEventListener("click", showResult, false)
-
-// document.getElementById("mode-back").addEventListener("click", function (){
-//     document.getElementById("main").style.display ="block";
-//     document.getElementById("main2").style.display = "none"
-
-//     html = editorHtml.getValue()
-//     css = editorCss.getValue()
-//     js = editorJs.getValue()
-    
-// })
+preview2.addEventListener("click", openWin)
 
 
+save2.addEventListener('click',function (){
+    var html = editorHtml.getValue();
+    var css = editorCss.getValue();
+    var js = editorJs.getValue();
 
+    a1.click();
+    a2.click();
+    a3.click();
 
+    alert("Don't forgot to connect CSS and Javascript files to HTML files")
+
+})
 
 
 
