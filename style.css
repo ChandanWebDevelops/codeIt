@@ -91,6 +91,7 @@
 
 #main{
     height: 596px !important;
+    margin-top: 60px;
 }
 
 
@@ -126,4 +127,49 @@
 .result iframe {
     height: 100%;
     width: 100%;
+}
+
+#TriBar{
+    display: none;
+    font-size: 50px;
+    font-weight: 700;
+    margin-right: 15px;
+    color: white;
+}
+
+.option2{
+    display: none;
+    flex-direction: column;
+    background: #05112c;
+    height: 147px;
+    width: 100%;
+    gap: 4px;
+}
+
+.aTob{
+    height: 40px;
+    font-size: 15px;
+    background-color: rgb(5, 17, 44);
+    color: white;
+    border: 1px solid #0051ff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 320px ){
+    #preview{
+        display: none;
+    }
+    #Save{
+        display: none;
+    }
+    #TriBar{
+        display: block;
+    }
+    .option2{
+        display: none;
+    }
+    .mainBody{
+        margin-top: 60px;
+    }
 }
