@@ -121,19 +121,18 @@ document.getElementById("Save").addEventListener('click',function (){
 
 var newWindow;
 function openWin () {
-    html = editorHtml.getValue();
-    css = "<style>"+editorCss.getValue()+"</style>";
-    js = editorJs.getValue();
-
-
+    newWindow = window.open("", "newWindow", "width=900, height=600");
     function livePreview(){
-        newWindow = window.open("", "newWindow", "width=900, height=600");
+        html = editorHtml.getValue();
+        css = "<style>"+editorCss.getValue()+"</style>";
+        js = editorJs.getValue();
+        
         newWindow.document.body.innerHTML = html+css;
         newWindow.eval(js)
     }
     
     
-    setInterval(livePreview, 1000);
+     setInterval(livePreview, 1000);
 
 }
 
