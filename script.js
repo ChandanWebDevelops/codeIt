@@ -118,23 +118,30 @@ document.getElementById("Save").addEventListener('click',function (){
 })
 
 // Preview settings
-
 var newWindow;
-function openWin () {
+function openWin (){
+    // live Preview
+    
     newWindow = window.open("", "newWindow", "width=900, height=600");
-    function livePreview(){
+
+    html = editorHtml.getValue();
+    css = "<style>"+editorCss.getValue()+"</style>";
+    js = editorJs.getValue();
+
+    newWindow.document.body.innerHTML = html+css;
+    newWindow.eval(js) 
+    
+    setInterval(function () {
         html = editorHtml.getValue();
         css = "<style>"+editorCss.getValue()+"</style>";
         js = editorJs.getValue();
-        
+    
         newWindow.document.body.innerHTML = html+css;
-        newWindow.eval(js)
-    }
-    
-    
-     setInterval(livePreview, 1000);
+        newWindow.eval(js) 
+    }, 1000);
 
 }
+
 
 
 document.getElementById("preview").addEventListener("click", openWin)
