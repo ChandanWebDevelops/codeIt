@@ -126,19 +126,14 @@ function openWin () {
     js = editorJs.getValue();
 
 
-
-    newWindow = window.open("", "newWindow", "width=900, height=600");
-    newWindow.document.body.innerHTML = html+css;
-    newWindow.eval(js)
-    
-    setInterval(function () {
-        html = editorHtml.getValue();
-        css = "<style>"+editorCss.getValue()+"</style>";
-        js = editorJs.getValue();
-    
+    function livePreview(){
+        newWindow = window.open("", "newWindow", "width=900, height=600");
         newWindow.document.body.innerHTML = html+css;
-        newWindow.eval(js) 
-    }, 1000);
+        newWindow.eval(js)
+    }
+    
+    
+    setInterval(livePreview, 1000);
 
 }
 
