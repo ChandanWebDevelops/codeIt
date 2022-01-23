@@ -131,15 +131,6 @@ function openWin (){
     newWindow.document.body.innerHTML = html+css;
     newWindow.eval(js) 
     
-    setInterval(function () {
-        html = editorHtml.getValue();
-        css = "<style>"+editorCss.getValue()+"</style>";
-        js = editorJs.getValue();
-    
-        newWindow.document.body.innerHTML = html+css;
-        newWindow.eval(js) 
-    }, 1000);
-
 }
 
 
