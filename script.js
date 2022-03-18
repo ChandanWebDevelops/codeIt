@@ -1,11 +1,4 @@
-window.onload = function() {
-  editor = CodeMirror(document.getElementById("editorHtml"), {
-    value: "<html>\n  " + document.documentElement.innerHTML + "\n</html>",
-    mode: "text/html",
-    matchTags: {bothTags: true},
-    extraKeys: {"Ctrl-J": "toMatchingTag"}
-  });
-};
+
 
 var editorHtml = CodeMirror.fromTextArea(document.getElementById("editorHtml"),
 {   
