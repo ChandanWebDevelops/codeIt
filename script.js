@@ -1,3 +1,94 @@
+(function () {
+
+  const codemirror = CodeMirror(document.getElementById("editorHtml"), {
+    mode: 'xml',
+  })
+
+  // keymap を指定
+  codemirror.setOption('extraKeys', {
+    'Cmd-E': function() {
+      snippet()
+    },
+    'Ctrl-E': function() {
+      snippet()
+    }
+  })
+
+  
+  const snippets: any[] = [
+    { text: 'const', displayText: 'const declarations' },
+    { text: 'let', displayText: 'let declarations' },
+    { text: 'var', displayText: 'var declarations' },
+  ]
+
+  function snippet(): void {
+    CodeMirror.showHint(codemirror, function (): any {
+      const cursor = codemirror.getCursor()
+      const token = codemirror.getTokenAt(cursor)
+      const start: number = token.start
+      const end: number = cursor.ch
+      const line: number = cursor.line
+      const currentWord: string = token.string
+
+      
+      const list: any[] = snippets.filter(function (item): boolean {
+        return item.text.indexOf(currentWord) >= 0
+      })
+
+      return {
+        list: list.length ? list : snippets,
+        from: CodeMirror.Pos(line, start),
+        to: CodeMirror.Pos(line, end)
+      }
+    }, { completeSingle: false })
+  }
+})()
+
+(function () {
+
+  const codemirror = CodeMirror(document.getElementById("editorJs"), {
+    mode: 'xml',
+  })
+
+  /
+  codemirror.setOption('extraKeys', {
+    'Cmd-E': function() {
+      snippet()
+    },
+    'Ctrl-E': function() {
+      snippet()
+    }
+  })
+
+  
+  const snippets: any[] = [
+    { text: 'const', displayText: 'const declarations' },
+    { text: 'let', displayText: 'let declarations' },
+    { text: 'var', displayText: 'var declarations' },
+  ]
+
+  function snippet(): void {
+    CodeMirror.showHint(codemirror, function (): any {
+      const cursor = codemirror.getCursor()
+      const token = codemirror.getTokenAt(cursor)
+      const start: number = token.start
+      const end: number = cursor.ch
+      const line: number = cursor.line
+      const currentWord: string = token.string
+
+      
+      const list: any[] = snippets.filter(function (item): boolean {
+        return item.text.indexOf(currentWord) >= 0
+      })
+
+      return {
+        list: list.length ? list : snippets,
+        from: CodeMirror.Pos(line, start),
+        to: CodeMirror.Pos(line, end)
+      }
+    }, { completeSingle: false })
+  }
+})()
 
 
 var editorHtml = CodeMirror.fromTextArea(document.getElementById("editorHtml"),
