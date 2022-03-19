@@ -174,7 +174,7 @@ save2.addEventListener('click',function (){
 main = document.getElementById("main")
 
 
-main.style.height = window.innerHeight-60+"px; !important";
+main.style.width = window.innerWidth-60+"px; !important";
 
 
 
