@@ -5,8 +5,6 @@ var editorHtml = CodeMirror.fromTextArea(document.getElementById("editorHtml"),
     mode: "xml",
     theme: "material-darker",
     autoCloseTags: true,
-    lint:true,
-    hint:true,
     comments:true
 });
 
@@ -18,8 +16,6 @@ var editorCss = CodeMirror.fromTextArea(document.getElementById("editorCss"),
     theme: "material-darker",
     autoCloseBrackets: true,
     styleActiveLine:true,
-    lint:true,
-    hint:true,
     comments:true
 });
 
@@ -31,8 +27,6 @@ var editorJs = CodeMirror.fromTextArea(document.getElementById("editorJs"),
     theme: "material-darker",
     autoCloseBrackets: true,
     autoMatchBrackets:true,
-    lint:true,
-    hint:true,
     comments:true
 });
 
