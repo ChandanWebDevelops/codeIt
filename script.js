@@ -168,13 +168,13 @@ save2.addEventListener('click',function (){
 
 })
 
-document.getElementById("main").style.width = `${window.innerWidth-17}px; !important`;
 
 
 
+main = document.getElementById("main")
 
 
-
+main.style.height = window.innerHeight-60+"px; !important";
 
 
 
