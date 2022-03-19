@@ -1,5 +1,4 @@
 
-document.getElementById("main").style.width = `${window.innerWidth-17}px; !important`;
 
 var editorHtml = CodeMirror.fromTextArea(document.getElementById("editorHtml"),
 {   
@@ -169,6 +168,7 @@ save2.addEventListener('click',function (){
 
 })
 
+document.getElementById("main").style.width = `${window.innerWidth-17}px; !important`;
 
 
 
