@@ -1,3 +1,6 @@
+
+document.getElementById("main").style.width = `${window.innerWidth-17}px`;
+
 var editorHtml = CodeMirror.fromTextArea(document.getElementById("editorHtml"),
 {   
     lineNumbers: true,
