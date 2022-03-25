@@ -178,6 +178,10 @@ main.style.width = window.innerWidth-60+"px; !important";
 
 
 
+newee = document.querySelectorAll(".CodeMirror-vscrollbar")
 
+for(i=0; i< newee.length; i++ ){
+    newee[0].style.zIndex = "0";
+}
 
 
