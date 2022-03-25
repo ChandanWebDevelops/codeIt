@@ -171,7 +171,7 @@ save2.addEventListener('click',function (){
 
 
 
-main = document.getElementsByClass("navBar")[0];
+main = document.getElementsByClassName("navBar")[0];
 
 
 main.style.width = window.innerWidth-60+"px; !important";
