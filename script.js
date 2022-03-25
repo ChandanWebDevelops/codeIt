@@ -171,17 +171,19 @@ save2.addEventListener('click',function (){
 
 
 
-main = document.getElementsByClass("navBar")
+main = document.getElementsByClass("navBar")[0];
 
 
 main.style.width = window.innerWidth-60+"px; !important";
 
 
-
+window.onload = function(){
 newee = document.querySelectorAll(".CodeMirror-vscrollbar")
 
 for(i=0; i< newee.length; i++ ){
-    newee[0].style.zIndex = "0";
+    newee[0].style.zIndex = "0; !important";
 }
+}
+
 
 
