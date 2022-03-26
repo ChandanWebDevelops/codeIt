@@ -3,7 +3,7 @@
 var editorHtml = CodeMirror.fromTextArea(document.getElementById("editorHtml"),
 {   
     lineNumbers: true,
-    tabSize: 4,
+    tabSize: 2,
     mode: "xml",
     theme: "material-darker",
     autoCloseTags: true,
@@ -13,7 +13,7 @@ var editorHtml = CodeMirror.fromTextArea(document.getElementById("editorHtml"),
 var editorCss = CodeMirror.fromTextArea(document.getElementById("editorCss"),
 {
     lineNumbers: true,
-    tabSize: 4,
+    tabSize: 2,
     mode: "css",
     theme: "material-darker",
     autoCloseBrackets: true,
@@ -24,7 +24,7 @@ var editorCss = CodeMirror.fromTextArea(document.getElementById("editorCss"),
 var editorJs = CodeMirror.fromTextArea(document.getElementById("editorJs"),
 {
     lineNumbers: true,
-    tabSize: 4,
+    tabSize: 2,
     mode: "javascript",
     theme: "material-darker",
     autoCloseBrackets: true,
@@ -171,12 +171,13 @@ save2.addEventListener('click',function (){
 
 
 
+
+
+function newFunc(){
 main = document.getElementsByClassName("navBar")[0];
 
 
 main.style.width = window.innerWidth-60+"px; !important";
-
-function newFunc(){
 hi = document.querySelectorAll(".CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler")
 for(i=0; i<hi.length; i++){
     hi[i].style.zIndex = "0";
