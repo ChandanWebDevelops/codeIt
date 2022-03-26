@@ -174,7 +174,8 @@ save2.addEventListener('click',function (){
 
 
 function newFunc(){
-
+main = document.getElementsByClassName("navBar")[0];
+main.style.width = window.innerWidth;
 hi = document.querySelectorAll(".CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler")
 for(i=0; i<hi.length; i++){
     hi[i].style.zIndex = "0";
