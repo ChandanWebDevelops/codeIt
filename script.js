@@ -174,10 +174,7 @@ save2.addEventListener('click',function (){
 
 
 function newFunc(){
-main = document.getElementById("main")
-wid = window.innerWidth;
 
-main.style.width = `${wid-60}px`
 hi = document.querySelectorAll(".CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler")
 for(i=0; i<hi.length; i++){
     hi[i].style.zIndex = "0";
