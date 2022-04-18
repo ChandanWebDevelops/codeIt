@@ -121,7 +121,7 @@ var newWindow;
 function openWin (){
     // live Preview
     
-    newWindow = window.open("", "newWindow", "width=900, height=600");
+    newWindow = window.open("", "newWindow");
 
     html = editorHtml.getValue();
     css = "<style>"+editorCss.getValue()+"</style>";
